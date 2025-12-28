@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kulichara - ювелирная мастерская в Москве. Изготовление украшений на заказ, ремонт, закрепка камней. Опытные мастера, гарантия качества.">
+    <meta name="keywords" content="ювелирная мастерская, изготовление украшений, ремонт ювелирных изделий, Москва, заказать кольцо, золото, серебро">
+    <meta property="og:title" content="Kulichara - Ювелирная мастерская в Москве">
+    <meta property="og:description" content="Изготовление эксклюзивных украшений и профессиональный ремонт изделий любой сложности">
+    <meta property="og:type" content="website">
+    <title>Kulichara - Ювелирная мастерская в Москве | Изготовление украшений на заказ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .logo-circle {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #c9a961 0%, #d4b574 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+        }
+
+        .company-info h1 {
+            font-size: 1.4rem;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .company-info p {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .phone {
+            color: #c9a961;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 600;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        .phone:hover {
+            color: #d4b574;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .menu-btn:hover span {
+            background: #c9a961;
+        }
+
+        .nav-menu {
+            display: none;
+            position: fixed;
+            top: 75px;
+            right: 0;
+            background: rgba(0, 0, 0, 0.98);
+            padding: 2rem;
+            min-width: 250px;
+            box-shadow: -5px 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-menu.active {
+            display: block;
+        }
+
+        .nav-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-menu a:hover {
+            color: #c9a961;
+            padding-left: 1.5rem;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 3rem;
+            margin-top: 75px;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content h2 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.1rem 2.8rem;
+            background: linear-gradient(135deg, #c9a961 0%, #b89751 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 20px rgba(201, 169, 97, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201, 169, 97, 0.5);
+        }
+
+        .btn::after {
+            content: ' →';
+            margin-left: 8px;
+            transition: margin-left 0.3s;
+        }
+
+        .btn:hover::after {
+            margin-left: 12px;
+        }
+
+        section {
+            padding: 6rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 3.5rem;
+            color: #1a1a1a;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: -2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services {
+            background: #fafafa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-content {
+            padding: 1.8rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .workflow {
+            background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.02)),
+                        url('https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .workflow-step {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            position: relative;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .workflow-step:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 6rem;
+            color: rgba(201, 169, 97, 0.1);
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .step-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .workflow-step h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .workflow-step p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .products {
+            background: #fafafa;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.2rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .price-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .price-label {
+            color: #999;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .price-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #c9a961;
+        }
+
+        .why-us {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                        url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .why-us h2 {
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .feature-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .feature-content p {
+            color: #ddd;
+            line-height: 1.7;
+        }
+
+        .portfolio {
+            background: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.03)),
+                        url('https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .portfolio h2 {
+            color: #1a1a1a;
+            text-shadow: 0 2px 10px rgba(255,255,255,0.8);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 350px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+            display: block;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .portfolio-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-item:hover::after {
+            opacity: 1;
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: rgba(201, 169, 97, 0.2);
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #c9a961, #d4b574);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1.2rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #c9a961;
+            background: rgba(255,255,255,0.15);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .checkbox-wrapper input {
+            margin-top: 4px;
+            width: auto;
+        }
+
+        .checkbox-wrapper label {
+            font-size: 0.9rem;
+            color: #ddd;
+            line-height: 1.5;
+        }
+
+        .messenger-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .messenger-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20BA5A;
+            transform: translateY(-3px);
+        }
+
+        .telegram-btn {
+            background: #0088cc;
+            color: white;
+        }
+
+        .telegram-btn:hover {
+            background: #006699;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background: #0f0f1e;
+            color: white;
+            padding: 4rem 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.2rem;
+            font-size: 1.15rem;
+            color: #c9a961;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.7rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #c9a961;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(201, 169, 97, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #c9a961;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .social-links a:hover {
+            background: #c9a961;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .scroll-top {
+            background: rgba(201, 169, 97, 0.1);
+            border: 1px solid #c9a961;
+            color: #c9a961;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .scroll-top:hover {
+            background: #c9a961;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 1200px) {
+            .services-grid,
+            .products-grid,
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .workflow-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            .header-right {
+                gap: 1rem;
+            }
+
+            .company-info h1 {
+                font-size: 1.1rem;
+            }
+
+            .phone {
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                padding: 0 1.5rem;
+                background-attachment: scroll;
+            }
+
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .products-grid,
+            .workflow-grid,
+            .portfolio-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            .messenger-buttons {
+                flex-direction: column;
+            }
+
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-section">
+                <div class="logo-circle">K</div>
+                <div class="company-info">
+                    <h1>Kulichara</h1>
+                    <p>Ювелирная мастерская</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="tel:+79035500585" class="phone">+7 (903) 550-05-85</a>
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-menu" id="navMenu">
+            <a href="#services">Услуги</a>
+            <a href="#workflow">Как мы работаем</a>
+            <a href="#products">Изделия</a>
+            <a href="#why-us">Преимущества</a>
+            <a href="#portfolio">Работы</a>
+            <a href="#testimonials">Отзывы</a>
+            <a href="#contact">Контакты</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Ювелирная<br>мастерская в Москве</h2>
+            <p>Изготовление эксклюзивных украшений и профессиональный ремонт изделий любой сложности</p>
+            <a href="#contact" class="btn">Оставить заявку</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Наши услуги</h2>
+        <p class="section-subtitle">Профессиональный подход к каждому изделию</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80" alt="Изготовление изделий">
+                <div class="service-content">
+                    <h3>Изготовление изделий</h3>
+                    <p>Создаём уникальные украшения по вашим эскизам из золота, серебра и платины</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343a?w=600&q=80" alt="Ремонт украшений">
+                <div class="service-content">
+                    <h3>Ремонт украшений</h3>
+                    <p>Профессиональный ремонт любой сложности: пайка, полировка, замена элементов</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" alt="Копии и дубликаты">
+                <div class="service-content">
+                    <h3>Копии и дубликаты</h3>
+                    <p>Точное воссоздание любимых украшений с сохранением всех деталей</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80" alt="Закрепка камней">
+                <div class="service-content">
+                    <h3>Закрепка камней</h3>
+                    <p>Качественная работа с драгоценными и полудрагоценными камнями</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="workflow">
+        <h2>Как мы работаем</h2>
+        <div class="workflow-grid">
+            <div class="workflow-step">
+                <span class="step-number">1</span>
+                <div class="step-icon">💬</div>
+                <h3>Консультация</h3>
+                <p>Свяжитесь с нами удобным способом: по телефону, в мессенджерах или приезжайте в мастерскую. Расскажите о вашем проекте.</p>
+            </div>
+            <div class="workflow-step">
+                <span class="step-number">2</span>
+                <div class="step-icon">💰</div>
+                <h3>Расчёт стоимости</h3>
+                <p>Мастер оценит сложность работы и рассчитает стоимость. Все цены индивидуальны и зависят от материалов и сложности изделия.</p>
+            </div>
+            <div class="workflow-step">
+                <span class="step-number">3</span>
+                <div class="step-icon">⚒️</div>
+                <h3>Изготовление</h3>
+                <p>После согласования деталей и внесения предоплаты мы приступаем к работе. Ремонт оплачивается после готовности изделия.</p>
+            </div>
+            <div class="workflow-step">
+                <span class="step-number">4</span>
+                <div class="step-icon">✨</div>
+                <h3>Получение</h3>
+                <p>Вы получаете готовое украшение высочайшего качества с гарантией и улыбкой от мастера!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Изделия на заказ</h2>
+        <p class="section-subtitle">Цены уточняйте у ювелира индивидуально</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80" alt="Кулоны и подвески">
+                <div class="product-info">
+                    <h3>Кулоны и подвески</h3>
+                    <div class="price-info">
+                        <span class="price-label">Цена от</span>
+                        <span class="price-value">32 000 ₽</span>
+                    </div>
+                    <a href="tel:+79035500585" class="btn">Заказать</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" alt="Кольца">
+                <div class="product-info">
+                    <h3>Кольца</h3>
+                    <div class="price-info">
+                        <span class="price-label">Цена от</span>
+                        <span class="price-value">96 400 ₽</span>
+                    </div>
+                    <a href="tel:+79035500585" class="btn">Заказать</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343a?w=600&q=80" alt="Серьги">
+                <div class="product-info">
+                    <h3>Серьги</h3>
+                    <div class="price-info">
+                        <span class="price-label">Цена от</span>
+                        <span class="price-value">46 000 ₽</span>
+                    </div>
+                    <a href="tel:+79035500585" class="btn">Заказать</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80" alt="Цепочки">
+                <div class="product-info">
+                    <h3>Цепочки</h3>
+                    <div class="price-info">
+                        <span class="price-label">Цена от</span>
+                        <span class="price-value">52 000 ₽</span>
+                    </div>
+                    <a href="tel:+79035500585" class="btn">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="why-us">
+        <h2>Почему выбирают нас</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <div class="feature-content">
+                    <h3>Все изделия с именником и пробой</h3>
+                    <p>Работаем официально, каждое изделие имеет клеймо изготовителя и соответствующую пробу металла</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💎</div>
+                <div class="feature-content">
+                    <h3>Высокое качество работы</h3>
+                    <p>Опытные мастера-ювелиры с многолетним стажем гарантируют безупречное исполнение</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-content">
+                    <h3>Гарантия на все работы</h3>
+                    <p>Предоставляем гарантию на все виды услуг и несём полную ответственность за качество</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-content">
+                    <h3>Индивидуальный подход</h3>
+                    <p>Воплощаем в жизнь самые смелые идеи, работаем по вашим эскизам и пожеланиям</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Примеры наших работ</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80" alt="Работа 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80" alt="Работа 2">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&q=80" alt="Работа 3">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=600&q=80" alt="Работа 4">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&q=80" alt="Работа 5">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=600&q=80" alt="Работа 6">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&q=80" alt="Работа 7">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343a?w=600&q=80" alt="Работа 8">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Отзывы наших клиентов</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Заказывала обручальные кольца. Мастер предложил несколько вариантов дизайна, работа выполнена идеально! Очень довольна качеством и сроками изготовления.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">А</div>
+                    <div class="author-info">
+                        <h4>Анна Петрова</h4>
+                        <p>Клиент</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Отремонтировали старинную брошь, которую я уже считала потерянной. Работа выполнена на высшем уровне, изделие выглядит как новое. Спасибо большое!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">М</div>
+                    <div class="author-info">
+                        <h4>Мария Иванова</h4>
+                        <p>Клиент</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Изготовили кольцо с бриллиантом по индивидуальному эскизу. Результат превзошёл все ожидания! Профессионалы своего дела, рекомендую.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">Д</div>
+                    <div class="author-info">
+                        <h4>Дмитрий Соколов</h4>
+                        <p>Клиент</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta">
+        <h2>Свяжитесь с нами</h2>
+        <p>Оставьте заявку, и мы свяжемся с вами в ближайшее время для обсуждения вашего проекта</p>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <input type="text" name="name" placeholder="Ваше имя *" required>
+            <input type="tel" name="phone" placeholder="Телефон *" required>
+            <input type="email" name="email" placeholder="Email">
+            <textarea name="message" placeholder="Расскажите о вашем проекте"></textarea>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="consent" required>
+                <label for="consent">Я согласен с обработкой персональных данных и политикой конфиденциальности</label>
+            </div>
+            <button type="submit" class="btn">Отправить заявку</button>
+        </form>
+        <div class="messenger-buttons">
+            <a href="https://wa.me/79035500585" class="messenger-btn whatsapp-btn" target="_blank">
+                📱 WhatsApp
+            </a>
+            <a href="https://t.me/+79035500585" class="messenger-btn telegram-btn" target="_blank">
+                ✈️ Telegram
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kulichara</h3>
+                <p>Ювелирная мастерская</p>
+                <p>Индивидуальный подход</p>
+                <p>Высокое качество</p>
+                <p>Гарантия на все работы</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>📍 г. Москва</p>
+                <p>📞 <a href="tel:+79035500585">+7 (903) 550-05-85</a></p>
+                <p>⏰ Пн-Пт: 10:00-19:00</p>
+                <p>⏰ Сб-Вс: по записи</p>
+            </div>
+            <div class="footer-section">
+                <h3>Услуги</h3>
+                <a href="#services">Изготовление украшений</a>
+                <a href="#services">Ремонт изделий</a>
+                <a href="#services">Закрепка камней</a>
+                <a href="#services">Копии и дубликаты</a>
+            </div>
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="#" title="ВКонтакте">ВК</a>
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="https://wa.me/79035500585" title="WhatsApp" target="_blank">WA</a>
+                    <a href="https://t.me/+79035500585" title="Telegram" target="_blank">TG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Работы</a>
+                <a href="#testimonials">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/79035500585" class="floating-whatsapp" target="_blank" title="Написать в WhatsApp">
+        💬
+    </a>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+            event.target.reset();
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const menu = document.getElementById('navMenu');
+                menu.classList.remove('active');
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('navMenu');
+            const menuBtn = document.querySelector('.menu-btn');
+            
+            if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
