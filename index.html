@@ -148,8 +148,8 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://picsum.photos/1600/900?random=1');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://cdn.pixabay.com/photo/2017/08/01/11/48/jewelry-2564394_1280.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -198,6 +198,9 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0 5px 20px rgba(201, 169, 97, 0.4);
+            white-space: nowrap;
+            text-align: center;
+            min-width: 180px;
         }
 
         .btn:hover {
@@ -286,15 +289,11 @@
         }
 
         .workflow {
-            background: #ffffff;
-        }
-
-        .workflow h2 {
-            font-size: 3rem;
-            margin-bottom: 3.5rem;
-            color: #1a1a1a;
-            font-weight: 700;
-            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.02)),
+                        url('https://cdn.pixabay.com/photo/2015/07/02/10/22/training-828764_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .workflow-grid {
@@ -304,15 +303,16 @@
         }
 
         .workflow-step {
-            background: #fafafa;
+            background: rgba(255, 255, 255, 0.95);
             padding: 2.5rem 2rem;
             border-radius: 10px;
             position: relative;
             transition: all 0.3s;
+            backdrop-filter: blur(10px);
         }
 
         .workflow-step:hover {
-            background: #f0f0f0;
+            background: rgba(255, 255, 255, 1);
             transform: translateY(-5px);
         }
 
@@ -409,7 +409,7 @@
 
         .why-us {
             background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-                        url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1600&q=80');
+                        url('https://cdn.pixabay.com/photo/2016/03/27/19/33/jewellery-1283823_1280.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -457,11 +457,16 @@
         }
 
         .portfolio {
-            background: #ffffff;
+            background: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.03)),
+                        url('https://cdn.pixabay.com/photo/2017/12/30/13/25/diamond-3050249_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .portfolio h2 {
             color: #1a1a1a;
+            text-shadow: 0 2px 10px rgba(255,255,255,0.8);
         }
 
         .portfolio-grid {
@@ -657,12 +662,15 @@
         .messenger-btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
+            min-width: 200px;
+            font-size: 1rem;
         }
 
         .whatsapp-btn {
@@ -727,8 +735,8 @@
         }
 
         .social-links a {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background: rgba(201, 169, 97, 0.1);
             border-radius: 50%;
             display: flex;
@@ -738,6 +746,7 @@
             color: #c9a961;
             transition: all 0.3s;
             font-weight: 600;
+            font-size: 0.95rem;
         }
 
         .social-links a:hover {
@@ -766,12 +775,15 @@
             background: rgba(201, 169, 97, 0.1);
             border: 1px solid #c9a961;
             color: #c9a961;
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .scroll-top:hover {
@@ -856,6 +868,18 @@
                 font-size: 2rem;
             }
 
+            .btn {
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
+                min-width: 160px;
+            }
+
+            .messenger-btn {
+                padding: 0.9rem 1.8rem;
+                font-size: 0.95rem;
+                min-width: 100%;
+            }
+
             .services-grid,
             .products-grid,
             .workflow-grid,
@@ -888,11 +912,23 @@
             }
 
             .floating-whatsapp {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
+                width: 55px;
+                height: 55px;
+                font-size: 1.8rem;
                 bottom: 20px;
                 right: 20px;
+            }
+
+            .scroll-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            .social-links a {
+                width: 45px;
+                height: 45px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -935,41 +971,6 @@
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Наши услуги</h2>
-        <p class="section-subtitle">Профессиональный подход к каждому изделию</p>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_960_720.jpg" alt="Изготовление изделий" loading="lazy">
-                <div class="service-content">
-                    <h3>Изготовление изделий</h3>
-                    <p>Создаём уникальные украшения по вашим эскизам из золота, серебра и платины</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_960_720.jpg" alt="Ремонт украшений" loading="lazy">
-                <div class="service-content">
-                    <h3>Ремонт украшений</h3>
-                    <p>Профессиональный ремонт любой сложности: пайка, полировка, замена элементов</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://cdn.pixabay.com/photo/2016/03/27/19/43/wedding-rings-1283232_960_720.jpg" alt="Копии и дубликаты" loading="lazy">
-                <div class="service-content">
-                    <h3>Копии и дубликаты</h3>
-                    <p>Точное воссоздание любимых украшений с сохранением всех деталей</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://cdn.pixabay.com/photo/2017/11/14/00/28/diamond-2947964_960_720.jpg" alt="Закрепка камней" loading="lazy">
-                <div class="service-content">
-                    <h3>Закрепка камней</h3>
-                    <p>Качественная работа с драгоценными и полудрагоценными камнями</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="workflow" class="workflow">
         <h2>Как мы работаем</h2>
         <div class="workflow-grid">
@@ -1005,7 +1006,7 @@
         <p class="section-subtitle">Цены уточняйте у ювелира индивидуально</p>
         <div class="products-grid">
             <div class="product-card">
-                <img src="https://cdn.pixabay.com/photo/2017/08/06/22/01/loupe-2596394_960_720.jpg" alt="Кулоны и подвески" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2020/07/01/16/14/jewelry-5360342_1280.jpg" alt="Кулоны и подвески">
                 <div class="product-info">
                     <h3>Кулоны и подвески</h3>
                     <div class="price-info">
@@ -1016,7 +1017,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://cdn.pixabay.com/photo/2016/03/27/19/43/wedding-rings-1283232_960_720.jpg" alt="Кольца" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2017/08/18/10/30/wedding-rings-2654034_1280.jpg" alt="Кольца">
                 <div class="product-info">
                     <h3>Кольца</h3>
                     <div class="price-info">
@@ -1027,7 +1028,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://cdn.pixabay.com/photo/2019/07/02/05/54/wealth-4311106_960_720.jpg" alt="Серьги" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2017/09/25/21/26/earrings-2786679_1280.jpg" alt="Серьги">
                 <div class="product-info">
                     <h3>Серьги</h3>
                     <div class="price-info">
@@ -1038,7 +1039,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="https://cdn.pixabay.com/photo/2020/03/28/14/01/chain-4977467_960_720.jpg" alt="Цепочки" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2018/03/27/21/43/startup-3267505_1280.jpg" alt="Цепочки">
                 <div class="product-info">
                     <h3>Цепочки</h3>
                     <div class="price-info">
@@ -1089,28 +1090,28 @@
         <h2>Примеры наших работ</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2016/03/27/19/43/wedding-rings-1283232_960_720.jpg" alt="Работа 1" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2017/08/01/11/48/jewelry-2564394_1280.jpg" alt="Работа 1">
             </div>
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2017/11/14/00/28/diamond-2947964_960_720.jpg" alt="Работа 2" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2019/07/05/11/42/ring-4318705_1280.jpg" alt="Работа 2">
             </div>
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2019/07/02/05/54/wealth-4311106_960_720.jpg" alt="Работа 3" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2020/07/01/16/14/jewelry-5360342_1280.jpg" alt="Работа 3">
             </div>
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2017/08/06/22/01/loupe-2596394_960_720.jpg" alt="Работа 4" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2017/08/18/10/30/wedding-rings-2654034_1280.jpg" alt="Работа 4">
             </div>
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2020/03/28/14/01/chain-4977467_960_720.jpg" alt="Работа 5" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/19/33/jewellery-1283823_1280.jpg" alt="Работа 5">
             </div>
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_960_720.jpg" alt="Работа 6" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2017/09/25/21/26/earrings-2786679_1280.jpg" alt="Работа 6">
             </div>
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_960_720.jpg" alt="Работа 7" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2017/12/30/13/25/diamond-3050249_1280.jpg" alt="Работа 7">
             </div>
             <div class="portfolio-item">
-                <img src="https://cdn.pixabay.com/photo/2016/11/29/03/35/girl-1867092_960_720.jpg" alt="Работа 8" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/12/13/blade-1869430_1280.jpg" alt="Работа 8">
             </div>
         </div>
     </section>
@@ -1262,3 +1263,37 @@
     </script>
 </body>
 </html>
+
+    <section id="services" class="services">
+        <h2>Наши услуги</h2>
+        <p class="section-subtitle">Профессиональный подход к каждому изделию</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2017/08/01/11/48/jewelry-2564394_1280.jpg" alt="Изготовление изделий">
+                <div class="service-content">
+                    <h3>Изготовление изделий</h3>
+                    <p>Создаём уникальные украшения по вашим эскизам из золота, серебра и платины</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/19/33/jewellery-1283823_1280.jpg" alt="Ремонт украшений">
+                <div class="service-content">
+                    <h3>Ремонт украшений</h3>
+                    <p>Профессиональный ремонт любой сложности: пайка, полировка, замена элементов</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2017/12/30/13/25/diamond-3050249_1280.jpg" alt="Копии и дубликаты">
+                <div class="service-content">
+                    <h3>Копии и дубликаты</h3>
+                    <p>Точное воссоздание любимых украшений с сохранением всех деталей</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2019/07/05/11/42/ring-4318705_1280.jpg" alt="Закрепка камней">
+                <div class="service-content">
+                    <h3>Закрепка камней</h3>
+                    <p>Качественная работа с драгоценными и полудрагоценными камнями</p>
+                </div>
+            </div>
+        </div>
